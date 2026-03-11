@@ -16,7 +16,7 @@ con <- dbConnect(RSQLite::SQLite(), "songs.db")
 # Step 4: Create a reference to the songs table
 songs_table <- tbl(con, "songs")
 
-# Step 5: Construct query to retrieve titles where artist_id = 11 (Queen)
+# Step 5: Construct query to retrieve titles where artist_id = 11
 queen_songs <- songs_table %>%
   filter(artist_id == 11) %>%
   select(title)
